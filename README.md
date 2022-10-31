@@ -1,5 +1,7 @@
 # Kubernetes Practice
 
+This project is a demo project for Kubernetes learning.
+
 ```mermaid
 flowchart TB;
     subgraph External
@@ -10,10 +12,16 @@ flowchart TB;
         direction LR
         mongo-express --> mongodb-service
         mongodb-service --> mongodb
-        subgraph Config
-            config-map
-            secret
+        subgraph Config LR
+            mongodb-config-map
+            mongodb-secret
         end
     end
     External --> Internal
+```
+
+```js
+const hello = () => {
+  return "hello world!";
+};
 ```
